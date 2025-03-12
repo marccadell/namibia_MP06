@@ -1,0 +1,25 @@
+{
+    "app": {
+      "title": "NAMIBIA",
+      "home": "Accueil",
+      "clothing": "Vêtements",
+      "shoes": "Chaussures",
+      "accessories": "Accessoires",
+      "contact": "Contact",
+      "cart": "Panier",
+      "checkout": "Commander",
+      "continue_shopping": "Continuer vos achats",
+      "purchase_success": "✅ Achat effectué avec succès ! Merci pour votre achat."
+    },
+    "home": {
+      "welcome": "Bienvenue",
+      "categories": "Catégories",
+      "women_clothing": "Vêtements pour femmes"
+    },
+    "products": {
+      "dress": { "name": "Robe Bleue", "description": "Élégante pour les événements" },
+      "jersey": { "name": "Pull", "description": "Pour le quotidien" },
+      "jeans": { "name": "Jean Skinny", "description": "Jean ajusté" }
+    }
+  }
+  

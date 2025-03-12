@@ -1,0 +1,25 @@
+{
+    "app": {
+      "title": "NAMIBIA",
+      "home": "Inicio",
+      "clothing": "Ropa",
+      "shoes": "Calzado",
+      "accessories": "Complementos",
+      "contact": "Contacto",
+      "cart": "Cesta",
+      "checkout": "Realizar compra",
+      "continue_shopping": "Seguir comprando",
+      "purchase_success": "✅ ¡Compra realizada con éxito! Gracias por tu compra."
+    },
+    "home": {
+      "welcome": "Bienvenid@s",
+      "categories": "Categorías",
+      "women_clothing": "Ropa de mujer"
+    },
+    "products": {
+      "dress": { "name": "Vestido Azul", "description": "Elegante para eventos" },
+      "jersey": { "name": "Jersey", "description": "Para el día a día" },
+      "jeans": { "name": "Jeans Skinny", "description": "Vaqueros ajustados" }
+    }
+  }
+  

@@ -1,0 +1,38 @@
+{
+    "app": {
+      "title": "NAMIBIA",
+      "home": "Home",
+      "clothing": "Clothing",
+      "shoes": "Shoes",
+      "accessories": "Accessories",
+      "contact": "Contact",
+      "cart": "Cart",
+      "checkout": "Checkout",
+      "continue_shopping": "Continue shopping",
+      "purchase_success": "✅ Purchase completed successfully! Thank you for your purchase."
+    },
+    "home": {
+      "welcome": "Welcome",
+      "categories": "Categories",
+      "women_clothing": "Women's Clothing"
+    },
+    "products": {
+      "dress": {
+        "name": "Blue Dress",
+        "description": "Elegant for events"
+      },
+      "jersey": {
+        "name": "Sweater",
+        "description": "For daily wear"
+      },
+      "jeans": {
+        "name": "Skinny Jeans",
+        "description": "Slim fit denim pants"
+      }
+    },
+    "product": {
+      "add_to_cart": "Add to cart",
+      "price": "Price"
+    }
+  }
+  
