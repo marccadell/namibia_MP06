@@ -32,9 +32,9 @@ export default {
     return {
       searchQuery: "",
       products: [
-        { name: "Zapatillas Running", description: "Para correr", price: 79.99, image: new URL('../assets/calzado1.jpg', import.meta.url).href },
-        { name: "Botas de Cuero", description: "Elegancia y resistencia", price: 99.99, image: new URL('../assets/calzado2.jpg', import.meta.url).href },
-        { name: "Zapatos Casual", description: "Para el día a día", price: 59.99, image: new URL('../assets/calzado3.jpg', import.meta.url).href }
+        { id: "calzado1", name: "Zapatillas Running", description: "Para correr", price: 79.99, image: new URL('../assets/calzado1.jpg', import.meta.url).href },
+        { id: "calzado2", name: "Botas de Cuero", description: "Elegancia y resistencia", price: 99.99, image: new URL('../assets/calzado2.jpg', import.meta.url).href },
+        { id: "calzado3", name: "Zapatos Casual", description: "Para el día a día", price: 59.99, image: new URL('../assets/calzado3.jpg', import.meta.url).href }
       ],
     };
   },

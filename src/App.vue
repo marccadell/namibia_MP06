@@ -1,26 +1,50 @@
 <template>
   <div id="app">
-    <header>
-      <h1 class="logo">{{ $t('app.title') }}</h1>
-      <nav>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img class="logo" src="./assets/logo.jpg" alt="Logo" />
+      </div>
+      <div class="nav-links">
         <ul>
-          <li><router-link to="/">{{ $t('app.home') }}</router-link></li>
-          <li><router-link to="/ropa">{{ $t('app.clothing') }}</router-link></li>
-          <li><router-link to="/calzado">{{ $t('app.shoes') }}</router-link></li>
-          <li><router-link to="/complementos">{{ $t('app.accessories') }}</router-link></li>
-          <li><router-link to="/checkout">{{ $t('app.cart') }} ({{ cartItems.length }})</router-link></li>
+          <li>
+            <router-link to="/">{{ $t("app.home") }}</router-link>
+          </li>
+          <li>
+            <router-link to="/ropa">{{ $t("app.clothing") }}</router-link>
+          </li>
+          <li>
+            <router-link to="/calzado">{{ $t("app.shoes") }}</router-link>
+          </li>
+          <li>
+            <router-link to="/complementos">{{ $t("app.accessories") }}</router-link>
+          </li>
+          <li>
+            <router-link to="/checkout"
+              >{{ $t("app.cart") }} ({{ cartItems.length }})</router-link
+            >
+          </li>
         </ul>
-      </nav>
+      </div>
 
-      <select v-model="$i18n.locale" @change="changeLanguage">
-        <option value="es">🇪🇸 Español</option>
-        <option value="en">🇬🇧 English</option>
-        <option value="fr">🇫🇷 Français</option>
-      </select>
-    </header>
+      <div class="btn-navbar">
+        <button @click="toggleCart" class="btn-cart">
+          {{
+            isCartOpen ? "🛒" + " (" + cartItems.length + ")" : "🛒"
+          }}
+        </button>
 
-    <router-view @add-to-cart="addToCart" :cartItems="cartItems" @clear-cart="clearCart"></router-view>
+        <select v-model="$i18n.locale" @change="changeLanguage" class="btn-lang">
+          <option value="es">🇪🇸 Español</option>
+          <option value="en">🇬🇧 English</option>
+          <option value="fr">🇫🇷 Français</option>
+        </select>
+      </div>
+    </nav>
 
+    <main>
+      <router-view @add-to-cart="addToCart" :cartItems="cartItems" @clear-cart="clearCart"></router-view>
+    </main>
+    
     <Cart
       v-if="isCartOpen"
       :cartItems="cartItems"
@@ -28,28 +52,25 @@
       @close-cart="toggleCart"
     />
 
-    <button @click="toggleCart">
-      {{ isCartOpen ? $t('app.cart') + ' (' + cartItems.length + ')' : $t('app.cart') }}
-    </button>
     <FooterC />
   </div>
 </template>
 
 <script>
-import Cart from './components/Cart.vue';
-import FooterC from '@/components/FooterC.vue';
+import Cart from "./components/Cart.vue";
+import FooterC from "@/components/FooterC.vue";
 
 export default {
   components: { Cart, FooterC },
   data() {
     return {
       cartItems: [],
-      isCartOpen: false
+      isCartOpen: false,
     };
   },
   methods: {
     addToCart(product) {
-      const existingProduct = this.cartItems.find(item => item.name === product.name);
+      const existingProduct = this.cartItems.find((item) => item.name === product.name);
       if (existingProduct) {
         existingProduct.quantity += 1;
       } else {
@@ -66,38 +87,169 @@ export default {
       this.cartItems = [];
     },
     changeLanguage() {
-      localStorage.setItem('lang', this.$i18n.locale);
-    }
-  }
+      localStorage.setItem("lang", this.$i18n.locale);
+    },
+  },
 };
 </script>
 
 <style scoped>
+*{
+  font-family: Arial, Helvetica, Arial, sans-serif;
+}
+
+main {
+  min-height: 80vh;
+}
+
 header {
   background: #f5f5f5;
   padding: 20px;
   text-align: center;
 }
 
-header .logo {
-  font-size: 2.5rem;
-  color: #333;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #fefefe;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-nav ul {
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo {
+  height: 50px;
+  object-fit: cover;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  padding: 8px 15px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  background-color: #007acc;
+  color: #fff;
+  border-radius: 8px;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.btn-navbar {
+  display: flex;
+  align-items: center;
   gap: 15px;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #007bff;
+/* Botón del carrito */
+.btn-cart {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+.btn-cart:hover {
+  background-color: #005f99;
+}
+
+/* Selector de idioma */
+.btn-lang {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-lang:hover {
+  border-color: #007acc;
+}
+
+
+/* Responsive */
+@media (max-width: 960px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+  select {
+    margin-top: 10px;
+  }
+
+  .btn-navbar {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn-cart {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-lang {
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>

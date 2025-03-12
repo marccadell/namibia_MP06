@@ -5,15 +5,6 @@ import SocialIcons from "@/components/Social-Icons.vue";
 
 <template>
     <footer>
-        <FooterLinks>
-            <template #link>
-                <a href="#" class="footer-link">Inicio</a>
-                <a href="#" class="footer-link">Ropa</a>
-                <a href="#" class="footer-link">Calzado</a>
-                <a href="#" class="footer-link">Complementos</a>
-                <a href="#" class="footer-link">Contacto</a>
-            </template>
-        </FooterLinks>
         <SocialIcons>
             <template #link>
                 <a href="#"><img class="social-img" src="../assets/tiktok.png" /></a>
@@ -36,7 +27,6 @@ import SocialIcons from "@/components/Social-Icons.vue";
         margin-top: 20px;
         background-color: rgb(199, 199, 199);
         height: 25vh;
-        border: 2px dashed red;
     }
 
     .footer-info {

@@ -30,9 +30,9 @@ export default {
     return {
       searchQuery: "",
       products: [
-        { name: "Bolso", description: "Para el día a día", price: 49.99, image: new URL('../assets/comp1.jpg', import.meta.url).href },
-        { name: "Colgante", description: "Sofisticado", price: 89.99, image: new URL('../assets/comp2.jpg', import.meta.url).href },
-        { name: "Pendientes", description: "Comodidad y estilo", price: 39.99, image: new URL('../assets/comp3.jpg', import.meta.url).href }
+        { id: "comple1", name: "Bolso", description: "Para el día a día", price: 49.99, image: new URL('../assets/comp1.jpg', import.meta.url).href },
+        { id: "comple2", name: "Colgante", description: "Sofisticado", price: 89.99, image: new URL('../assets/comp2.jpg', import.meta.url).href },
+        { id: "comple3", name: "Pendientes", description: "Comodidad y estilo", price: 39.99, image: new URL('../assets/comp3.jpg', import.meta.url).href }
       ],
     };
   },

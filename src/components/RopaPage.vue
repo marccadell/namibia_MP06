@@ -26,9 +26,9 @@ export default {
     return {
       searchQuery: "",
       products: [
-        { id: "dress", price: 29.99, image: new URL('../assets/ropa1.jpg', import.meta.url).href },
-        { id: "jersey", price: 49.99, image: new URL('../assets/ropa2.jpg', import.meta.url).href },
-        { id: "jeans", price: 59.99, image: new URL('../assets/ropa3.jpg', import.meta.url).href }
+        { id: "ropa1", price: 29.99, image: new URL('../assets/ropa1.jpg', import.meta.url).href },
+        { id: "ropa2", price: 49.99, image: new URL('../assets/ropa2.jpg', import.meta.url).href },
+        { id: "ropa3", price: 59.99, image: new URL('../assets/ropa3.jpg', import.meta.url).href }
       ],
     };
   },

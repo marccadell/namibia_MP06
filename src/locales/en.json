@@ -17,18 +17,24 @@
       "women_clothing": "Women's Clothing"
     },
     "products": {
-      "dress": {
+      "ropa1": {
         "name": "Blue Dress",
         "description": "Elegant for events"
       },
-      "jersey": {
+      "ropa2": {
         "name": "Sweater",
         "description": "For daily wear"
       },
-      "jeans": {
+      "ropa3": {
         "name": "Skinny Jeans",
         "description": "Slim fit denim pants"
-      }
+      },
+      "calzado1": { "name": "Running Shoes", "description": "For running" },
+      "calzado2": { "name": "Leather Boots", "description": "Elegance and durability" },
+      "calzado3": { "name": "Casual Shoes", "description": "For everyday use" },
+      "comple1": { "name": "Handbag", "description": "For everyday use" },
+      "comple2": { "name": "Pendant", "description": "Sophisticated" },
+      "comple3": { "name": "Earrings", "description": "Comfort and style" }
     },
     "product": {
       "add_to_cart": "Add to cart",

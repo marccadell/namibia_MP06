@@ -45,7 +45,7 @@ export default {
     padding: 15px;
     width: 330px;
     position: fixed;
-    top: 50px;
+    top: 100px;
     right: 20px;
   }
   

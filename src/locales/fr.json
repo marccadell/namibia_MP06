@@ -17,9 +17,19 @@
       "women_clothing": "Vêtements pour femmes"
     },
     "products": {
-      "dress": { "name": "Robe Bleue", "description": "Élégante pour les événements" },
-      "jersey": { "name": "Pull", "description": "Pour le quotidien" },
-      "jeans": { "name": "Jean Skinny", "description": "Jean ajusté" }
+      "ropa1": { "name": "Robe Bleue", "description": "Élégante pour les événements" },
+      "ropa2": { "name": "Pull", "description": "Pour le quotidien" },
+      "ropa3": { "name": "Jean Skinny", "description": "Jean ajusté" },
+      "calzado1": { "name": "Chaussures de Running", "description": "Pour courir" },
+      "calzado2": { "name": "Bottes en Cuir", "description": "Élégance et résistance" },
+      "calzado3": { "name": "Chaussures Casual", "description": "Pour le quotidien" },
+      "comple1": { "name": "Sac à main", "description": "Pour le quotidien" },
+      "comple2": { "name": "Pendentif", "description": "Sophistiqué" },
+      "comple3": { "name": "Boucles d'oreilles", "description": "Confort et style" }
+    },
+    "product": {
+      "add_to_cart": "Ajouter au panier",
+      "price": "Prix"
     }
-  }
+}
   

@@ -17,9 +17,19 @@
       "women_clothing": "Ropa de mujer"
     },
     "products": {
-      "dress": { "name": "Vestido Azul", "description": "Elegante para eventos" },
-      "jersey": { "name": "Jersey", "description": "Para el día a día" },
-      "jeans": { "name": "Jeans Skinny", "description": "Vaqueros ajustados" }
+      "ropa1": { "name": "Vestido Azul", "description": "Elegante para eventos" },
+      "ropa2": { "name": "Jersey", "description": "Para el día a día" },
+      "ropa3": { "name": "Jeans Skinny", "description": "Vaqueros ajustados" },
+      "calzado1": { "name": "Zapatillas Running", "description": "Para correr"},
+      "calzado2": { "name": "Botas de Cuero", "description": "Elegancia y resistencia"},
+      "calzado3": { "name": "Zapatos Casual", "description": "Para el día a día"},
+      "comple1": { "name": "Bolso", "description": "Para el día a día"},
+      "comple2": { "name": "Colgante", "description": "Sofisticado"},
+      "comple3": { "name": "Pendientes", "description": "Comodidad y estilo"}
+    },
+    "product": {
+      "add_to_cart": "Añadir al carrito",
+      "price": "Precio"
     }
-  }
+}
   
